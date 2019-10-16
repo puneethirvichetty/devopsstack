@@ -25,7 +25,7 @@ EOF
 # sudo cp /gcpterraform/scripts/mydaemon.json /etc/docker/daemon.json
 # sudo sed -i 's/$jenkinsip/'$jenkinsip'/' /etc/docker/daemon.json
 # sudo sed -i 's/$jenkinsip/'$jenkinsip'/' /etc/docker/daemon.json
-sudo  mv /usr/share/maven/conf/*  /mnt && sudo cp /gcpterraform/scripts/mvn_sonar_settings.xml /usr/share/maven/conf/settings.xml
+sudo  mv /usr/share/maven/conf/*  /mnt && sudo cp /devopsstack/mvn_sonar_settings.xml /usr/share/maven/conf/settings.xml
 sudo sed -i 's/$sonarqubeip/'$sonarqubeip'/' /usr/share/maven/conf/settings.xml 
 sudo systemctl restart docker &&  sudo systemctl enable  docker
 sudo systemctl restart jenkins &&  sudo systemctl enable  jenkins
