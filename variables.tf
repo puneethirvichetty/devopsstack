@@ -38,5 +38,6 @@ variable "elk_instance_subnet_name" {}
 
 variable "kube_cluster_name" {}
 variable "kube_cluster_location" {}
-variable "kube_node_pool_name" {}
-variable "kube_node_pool_location" {}
+
+# variable "kube_node_pool_name" {}
+# variable "kube_node_pool_location" {}
