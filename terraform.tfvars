@@ -56,5 +56,5 @@ elk_instance_subnet_name = "default"
 kube_cluster_name = "k8s-vmname-stacked-timestamp"
 kube_cluster_location = "us-central1"
 
-kube_node_pool_name = "my-node-pool"
-kube_node_pool_location = "us-central1"
+# kube_node_pool_name = "my-node-pool"
+# kube_node_pool_location = "us-central1"
