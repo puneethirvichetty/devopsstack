@@ -246,23 +246,23 @@ resource "google_container_cluster" "primary" {
   }
 }
 
-resource "google_container_node_pool" "primary_preemptible_nodes" {
-  name       = "${var.kube_node_pool_name}"
-  location   = "${var.kube_node_pool_location}"
-  cluster    = "${google_container_cluster.primary.name}"
-  node_count = 1
+# resource "google_container_node_pool" "primary_preemptible_nodes" {
+#   name       = "${var.kube_node_pool_name}"
+#   location   = "${var.kube_node_pool_location}"
+#   cluster    = "${google_container_cluster.primary.name}"
+#   node_count = 1
 
-  node_config {
-    preemptible  = true
-    machine_type = "n1-standard-1"
+#   node_config {
+#     preemptible  = true
+#     machine_type = "n1-standard-1"
 
-    metadata = {
-      disable-legacy-endpoints = "true"
-    }
+#     metadata = {
+#       disable-legacy-endpoints = "true"
+#     }
 
-    oauth_scopes = [
-      "https://www.googleapis.com/auth/logging.write",
-      "https://www.googleapis.com/auth/monitoring",
-    ]
-  }
-}
+#     oauth_scopes = [
+#       "https://www.googleapis.com/auth/logging.write",
+#       "https://www.googleapis.com/auth/monitoring",
+#     ]
+#   }
+# }
