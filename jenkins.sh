@@ -5,7 +5,7 @@ sudo echo 'export ipdata=`curl -H "Metadata-Flavor: Google" http://metadata/comp
 source ~/.bash_profile
 # sudo cut -d + -f 1 <<< $ipdata
 export sonarqubeip=$(cut -d + -f 1  <<< $ipdata)
-export harborip=$(cut -d + -f 2  <<< $ipdata)
+# export harborip=$(cut -d + -f 2  <<< $ipdata)
 source ~/.bash_profile
 sudo yum install epel-release -y 
 sudo yum install java-1.8.0-openjdk  java-1.8.0-openjdk-devel  wget  unzip -y 
@@ -17,11 +17,11 @@ sudo  wget -O  /opt/docker.sh  https://get.docker.com && sudo chmod 755 /opt/doc
 sudo sh  /opt/docker.sh   &&  sudo usermod -aG  docker jenkins && sudo systemctl start docker
 sudo systemctl stop  docker
 sudo  touch /etc/docker/daemon.json
-sudo cat > /etc/docker/daemon.json << EOF
-{
-        "insecure-registries" : ["$harborip"]
-}
-EOF
+# sudo cat > /etc/docker/daemon.json << EOF
+# {
+#         "insecure-registries" : ["$harborip"]
+# }
+# EOF
 # sudo cp /gcpterraform/scripts/mydaemon.json /etc/docker/daemon.json
 # sudo sed -i 's/$jenkinsip/'$jenkinsip'/' /etc/docker/daemon.json
 # sudo sed -i 's/$jenkinsip/'$jenkinsip'/' /etc/docker/daemon.json
